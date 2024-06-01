@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss">
 .editor-header {
-  background-color: rgb(44,44,57);
+  //background-color: rgb(44,44,57);
   padding: 1em;
   position: sticky;
   top: 0;

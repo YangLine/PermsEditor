@@ -153,7 +153,7 @@ export default {
 
 <style lang="scss">
 .node-list {
-  background-color: rgba(255,255,255,.2);
+  background-color: #282828;
   flex: 1;
   position: relative;
   display: flex;
@@ -172,8 +172,8 @@ export default {
   }
 
   .node-list-header {
-    background-color: rgb(67,67,78);
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    //background-color: rgb(67,67,78);
+    border-bottom: 2px solid $brand-color;
     position: sticky;
     top: 0;
     z-index: 10;

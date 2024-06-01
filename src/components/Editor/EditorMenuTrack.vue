@@ -125,7 +125,7 @@ export default {
         border: none;
         opacity: .5;
         cursor: pointer;
-        color: white;
+        color: #f2f2f2;
         font-size: 1.5rem;
         padding: 0;
         margin-right: .5rem;

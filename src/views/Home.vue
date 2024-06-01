@@ -301,7 +301,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-radius: 2px;
+      border-radius: 2rem;
       text-decoration: none;
       text-align: center;
 
@@ -313,7 +313,7 @@ export default {
         font-size: 3rem;
         display: block;
         opacity: .5;
-        color: #FFF;
+        color: #f2f2f2;
         margin-bottom: 1rem;
 
         @include breakpoint($sm) {

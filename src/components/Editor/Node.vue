@@ -437,7 +437,7 @@ export default {
     background: rgba(0,0,0,0.2);
     border-radius: 2px;
     padding: .2rem .5rem;
-    color: #FFF;
+    color: #f2f2f2;
     font-size: .8rem;
     font-family: 'Source Code Pro', monospace;
     line-height: 1.5;
@@ -497,7 +497,7 @@ export default {
         margin: 0;
         width: 100%;
         background: rgba(0,0,0,.25);
-        color: #FFF;
+        color: #f2f2f2;
 
         span {
           padding: 0;

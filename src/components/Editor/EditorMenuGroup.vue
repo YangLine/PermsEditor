@@ -80,7 +80,7 @@ export default {
 
   button {
     background: transparent;
-    color: white;
+    color: #f2f2f2;
     opacity: 0;
     border: 0;
     cursor: pointer;

@@ -1,5 +1,7 @@
-import axios from 'axios';
 import Locale from 'locale-codes';
+
+import en from '../messages/en.json';
+import zh from '../messages/zh_CN.json';
 
 // Need to import this dynamically otherwise it becomes a circular dependency and will throw errors
 const i18n = import('@/util/language');
@@ -33,7 +35,11 @@ export default {
     },
   },
   actions: {
-    async setUserLocale({ state, commit, dispatch }, locale) {
+    async setUserLocale({
+      state,
+      commit,
+      dispatch,
+    }, locale) {
       if (locale) {
         dispatch('fetchLanguage', locale);
         commit('setUserLocale', locale);
@@ -73,12 +79,26 @@ export default {
       dispatch('fetchLanguage', language);
       commit('setUserLocale', language);
     },
-    async fetchLanguages({ commit, dispatch }) {
-      const { data: { languages } } = await axios.get('https://metadata.luckperms.net/data/translations');
-
-      languages.en = {
-        code: 'en', name: 'English', localeTag: 'en_GB', progressWeb: 100,
+    async fetchLanguages({
+      commit,
+      dispatch,
+    }) {
+      const data = {
+        languages: {
+          'zh-CN': {
+            name: '中文',
+            localeTag: 'zh_CN',
+            progressWeb: 100,
+          },
+          en: {
+            name: 'English',
+            localeTag: 'en_GB',
+            progressWeb: 100,
+          },
+        },
       };
+
+      const { languages } = data;
 
       const languageFilter = (lang) => {
         const language = languages[lang];
@@ -91,7 +111,10 @@ export default {
       };
 
       const languageMap = (code) => {
-        const { name, localeTag } = languages[code];
+        const {
+          name,
+          localeTag,
+        } = languages[code];
 
         let [, countryCode] = localeTag.split('_');
         countryCode = countryCode.toLowerCase();
@@ -115,7 +138,8 @@ export default {
       };
 
       const langToArray = Object.keys(languages);
-      const supportedLanguages = langToArray.filter(languageFilter).map(languageMap);
+      const supportedLanguages = langToArray.filter(languageFilter)
+        .map(languageMap);
 
       commit('setSupportedLanguages', supportedLanguages);
       dispatch('setUserLocale');
@@ -125,13 +149,11 @@ export default {
 
       if (locale === 'en') {
         VueI18n.locale = locale;
-        return;
+        VueI18n.setLocaleMessage('en', en);
+      } else {
+        VueI18n.locale = locale;
+        VueI18n.setLocaleMessage('zh', zh);
       }
-
-      const { data } = await axios.get(`https://metadata.luckperms.net/translation/web/${locale}`);
-
-      VueI18n.locale = locale;
-      VueI18n.setLocaleMessage(locale, data);
     },
   },
 };

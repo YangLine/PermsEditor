@@ -100,7 +100,7 @@ export default {
 
     button {
       background: transparent;
-      color: #FFF;
+      color: #f2f2f2;
       border: 0;
       padding: 0 .8rem;
       cursor: pointer;

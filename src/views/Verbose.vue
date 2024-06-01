@@ -232,15 +232,15 @@ export default {
         padding: 1rem;
         line-height: 1;
         background: rgba(255,255,255,.05);
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
       }
 
       .meta-info {
         background: $grey;
         padding: 1rem;
-        border-bottom-left-radius: 2px;
-        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
       }
 
       td:first-child {
@@ -254,10 +254,11 @@ export default {
           font: inherit;
           width: 100%;
           background: rgba(255, 255, 255, .05);
-          color: #FFF;
+          color: #f2f2f2;
           padding: .5rem 1rem;
           border: 0;
           margin-top: .5rem;
+          border-radius: 1rem;
         }
 
         .exclude-result {
@@ -313,7 +314,7 @@ export default {
 
         [role="listitem"] {
           background: $grey;
-          border-radius: 2px;
+          border-radius: 1rem;
         }
       }
     }

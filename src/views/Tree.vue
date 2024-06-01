@@ -181,15 +181,15 @@ export default {
         padding: 1rem;
         line-height: 1;
         background: rgba(255,255,255,.05);
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
       }
 
       .meta-info {
         background: $grey;
         padding: 1rem;
-        border-bottom-left-radius: 2px;
-        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
       }
 
       td:first-child {
@@ -205,11 +205,12 @@ export default {
         margin-top: 1rem;
         margin-right: 1rem;
         cursor: pointer;
+        border-radius: 1rem;
 
         svg {
           opacity: .5;
           margin-right: .5rem;
-          color: #FFF;
+          color: #f2f2f2;
         }
       }
     }
@@ -226,6 +227,10 @@ export default {
 
         > .branch {
           padding-left: 0;
+
+         .node {
+          border-radius: .5rem;
+          }
         }
       }
     }
