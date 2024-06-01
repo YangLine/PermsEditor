@@ -417,7 +417,7 @@ export default {
   @import '~vue-multiselect/dist/vue-multiselect.min.css';
 
   .add-node {
-    background-color: #666670;
+    background-color: #333333;
     box-shadow: 0 0 1em rgba(0,0,0,.2);
     z-index: 10;
 
@@ -426,7 +426,7 @@ export default {
       display: flex;
 
       > div {
-        border-right: 1px solid rgba(0,0,0,.2);
+        //border-right: 1px solid rgba(0,0,0,.2);
         padding: .5rem 0;
       }
 
@@ -435,11 +435,12 @@ export default {
         color: $brand-color;
         background: $grey;
         border: 0;
-        border-radius: 2px;
+        border-radius: 1rem;
         width: 5em;
         cursor: not-allowed;
         opacity: .5;
-        font-family: "Source Code Pro", monospace;
+        //font-family: "Source Code Pro", monospace;
+
 
         span {
           display: flex;
@@ -539,7 +540,7 @@ export default {
               }
 
               &:nth-child(2) {
-                color: #FFF;
+                color: #f2f2f2;
               }
 
               &:nth-child(3) {
@@ -585,7 +586,7 @@ export default {
           }
 
           .null {
-            color: white;
+            color: #f2f2f2;
           }
 
           .selected {
@@ -596,7 +597,7 @@ export default {
         .multiselect__input {
           background: transparent;
           font: inherit;
-          color: #FFF;
+          color: #f2f2f2;
 
           &::placeholder {
             color: rgba(255,255,255,.2);
@@ -608,9 +609,9 @@ export default {
           height: 100%;
           border: 0;
           background: rgba(0,0,0,0.2);
-          border-radius: 2px;
+          border-radius: .5rem;
           padding: .2em .5em;
-          color: #FFF;
+          color: #f2f2f2;
           font-family: 'Source Code Pro', monospace;
           line-height: 1.5;
         }
@@ -698,13 +699,13 @@ export default {
     }
 
     .multiselect {
-      color: white;
+      color: #f2f2f2;
     }
 
     .multiselect__tags {
       background: rgba(0,0,0,.1);
       border: 0;
-      border-radius: 2px;
+      border-radius: 1rem;
       font: inherit;
       max-height: 30vh;
       overflow-y: auto;
@@ -712,7 +713,7 @@ export default {
 
     .multiselect__tag {
       background: rgba(0,0,0,.25);
-      color: white;
+      color: #f2f2f2;
       font-family: "Source Code Pro", monospace;
       font-size: .8rem;
       border-radius: 2px;
@@ -790,7 +791,7 @@ export default {
       input {
         border: 0;
         background: rgba(0,0,0,.2);
-        color: #FFF;
+        color: #f2f2f2;
         font-family: "Source Code Pro", monospace;
       }
 

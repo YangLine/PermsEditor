@@ -184,7 +184,7 @@ export default {
           width: auto;
           background: transparent;
           margin: 0;
-          color: white;
+          color: #f2f2f2;
           opacity: .5;
 
           &:hover {
@@ -248,5 +248,25 @@ export default {
         }
       }
     }
+  }
+
+  .available-groups {
+    li {
+    border-radius: 1rem;
+    }
+  }
+
+  .track-groups {
+    li {
+      border-radius: 1rem;
+    }
+  }
+
+  .save-button {
+    border-radius: 1rem;
+  }
+
+  #trackName {
+    color: #f2f2f2;
   }
 </style>

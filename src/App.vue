@@ -6,81 +6,48 @@
           <img alt="LuckPerms logo" src="@/assets/logo.svg">
           <span>LuckPerms</span>
         </router-link>
-        <transition name="fade">
-          <div v-if="!config.selfHosted && !isSponsorRoute" class="nav-message">
-            <router-link to="/sponsor">
-              <hr />
-              <img src="@/assets/bisect.svg" alt="Bisect Hosting">
-              <span v-html="$t('sponsor')" />
-            </router-link>
-          </div>
-        </transition>
       </div>
 
       <ul :class="{ active: menu, 'top-level': true }">
-        <li
-          v-show="showSearchBar"
-          class="search-container"
-        >
-          <div id="docsearch"></div>
-        </li>
-        <template v-if="!config.selfHosted">
-          <li>
-            <router-link to="/download">
-              <font-awesome icon="arrow-alt-circle-down" fixed-width />
-              {{ $t('links.download') }}
-            </router-link>
-          </li>
-          <li class="overlap">
-            <router-link to="/wiki">
-              <font-awesome icon="book" fixed-width />
-              {{ $t('wiki') }}
-            </router-link>
-          </li>
-        </template>
-        <li>
-          <span :class="{ 'router-link-active': isToolsRoute, tools: true }">
-            <font-awesome icon="tools" fixed-width />
-            {{ $t('links.tools.name') }}
-          </span>
-          <ul>
+<!--        <li-->
+<!--          v-show="showSearchBar"-->
+<!--          class="search-container"-->
+<!--        >-->
+<!--          <div id="docsearch"></div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span :class="{ 'router-link-active': isToolsRoute, tools: true }">-->
+<!--            <font-awesome icon="tools" fixed-width />-->
+<!--            {{ $t('links.tools.name') }}-->
+<!--          </span>-->
+<!--          <ul>-->
             <li>
               <router-link to="/editor">
-                <font-awesome icon="edit" fixed-width />
-                {{ $t('links.tools.editor') }}
+<!--                <font-awesome icon="edit" fixed-width />-->
+                <span class="material-symbols-outlined">edit</span>
+                <span>{{ $t('links.tools.editor') }}</span>
               </router-link>
             </li>
             <li>
               <router-link to="/verbose">
-                <font-awesome icon="comment-alt" fixed-width />
-                {{ $t('links.tools.verbose') }}
+<!--                <font-awesome icon="comment-alt" fixed-width />-->
+                <span class="material-symbols-outlined">pest_control</span>
+                <span>{{ $t('links.tools.verbose') }}</span>
               </router-link>
             </li>
             <li>
               <router-link to="/treeview">
-                <font-awesome icon="sitemap" fixed-width />
-                {{ $t('links.tools.tree') }}
+<!--                <font-awesome icon="sitemap" fixed-width />-->
+                <span class="material-symbols-outlined">account_tree</span>
+                <span>{{ $t('links.tools.tree') }}</span>
               </router-link>
             </li>
-          </ul>
-        </li>
-        <template v-if="!config.selfHosted">
-          <li class="external overlap">
-            <a href="https://github.com/LuckPerms/LuckPerms" target="_blank" class="github">
-              <font-awesome :icon="['fab', 'github']" fixed-width />
-              <span>GitHub</span>
-            </a>
-          </li>
-          <li class="external">
-            <a href="https://discord.gg/luckperms" target="_blank" class="discord">
-              <font-awesome :icon="['fab', 'discord']" fixed-width />
-              <span>Discord</span>
-            </a>
-          </li>
-        </template>
+<!--          </ul>-->
+<!--        </li>-->
         <li v-if="locale" @click="localeMenu = !localeMenu">
           <span class="locale">
-            <font-awesome icon="language" fixed-width />
+<!--            <font-awesome icon="language" fixed-width />-->
+            <span class="material-symbols-outlined">language</span>
             <span class="locale-label">{{ $t('links.language') }}</span>
           </span>
           <ul :class="['locale-menu', { open: !!localeMenu }]">
@@ -101,7 +68,8 @@
         id="nav-menu-toggle"
         @click="menu = !menu"
       >
-        <font-awesome icon="bars" />
+<!--        <font-awesome icon="bars" />-->
+        <span class="material-symbols-outlined">menu_open</span>
       </button>
 
       <transition name="fade">
@@ -123,17 +91,14 @@
         <ul>
           <li>
             <font-awesome icon="code-branch" fixed-width />
-            <a href="https://github.com/LuckPerms/LuckPermsWeb" target="_blank">LuckPermsWeb</a>
+            <a href="https://github.com/LuckPerms/LuckPermsWeb" target="_blank">PermEditor</a>
             @
             <a :href="'https://github.com/LuckPerms/LuckPermsWeb/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
           </li>
           <li>
-            <router-link v-if="!config.selfHosted" to="/wiki/Credits" target="_blank">
-              Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
-            </router-link>
-            <a v-else href="https://luckperms.net/wiki/Credits" target="_blank">
-              Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
-            </a>
+            <span>
+              Copyright © {{ new Date().getFullYear().toString() }} Craft Space Team | LuckPerms contributors
+            </span>
           </li>
         </ul>
       </div>
@@ -256,7 +221,7 @@ export default {
   --docsearch-footer-shadow: unset;
   --docsearch-highlight-color: rgba(255, 255, 255, .25);
   --docsearch-hit-background: #{$grey};
-  --docsearch-hit-color: white;
+  --docsearch-hit-color: #f2f2f2;
   --docsearch-hit-shadow: unset;
   --docsearch-icon-color: rgba(255, 255, 255, .5);
   --docsearch-key-gradient: linear-gradient(-225deg, #666, #999);
@@ -268,7 +233,7 @@ export default {
   --docsearch-searchbox-background: #{$grey};
   --docsearch-searchbox-focus-background: #{$grey};
   --docsearch-searchbox-shadow: inset 0 0 0 2px #{$brand-color};
-  --docsearch-text-color: white;
+  --docsearch-text-color: #f2f2f2;
 }
 
 * {
@@ -318,12 +283,12 @@ body {
 }
 
 #app {
-  font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+  font-family: "Poppins", "Noto Sans SC", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #FFF;
+  color: #f2f2f2;
   line-height: 1.5;
-  background-color: #141422;
+  background-color: #282828;
   width: 100%;
   height: 100%;
   display: flex;
@@ -398,7 +363,7 @@ body {
     font-size: 1.7rem;
     display: flex;
     align-items: center;
-    color: #FFF;
+    color: #f2f2f2;
     text-decoration: none;
     transition: all .2s;
     font-weight: bold;
@@ -458,13 +423,14 @@ body {
     top: 4rem;
     transition: right .2s;
     flex-direction: column;
-    background: black;
+    background: #181818;
     right: -100%;
     width: 100%;
     max-width: 24rem;
     z-index: 100;
     overflow: hidden;
     overflow-y: scroll;
+    border-radius: 1rem;
 
     @include breakpoint($sm) {
       flex-direction: row;
@@ -521,7 +487,7 @@ body {
         text-transform: uppercase;
         transition: all .2s;
         cursor: pointer;
-        width: 100%;
+        //width: 100%;
         font-size: 1.5rem;
 
         @include breakpoint($sm) {
@@ -534,7 +500,8 @@ body {
         }
 
         &.router-link-exact-active {
-          color: #FFF;
+          color: #f2f2f2;
+          border-radius: 1rem;
         }
 
         &.tools {
@@ -610,7 +577,7 @@ body {
       &:not(:first-child) {
         a, span {
           &.router-link-active {
-            color: #FFF;
+            color: #f2f2f2;
           }
         }
       }
@@ -675,7 +642,7 @@ body {
           }
 
           &.github {
-            color: #FFF;
+            color: #f2f2f2;
           }
 
           &.discord {
@@ -713,13 +680,13 @@ body {
       span {
         &.prev {
           &:after {
-            border-right-color: white;
+            border-right-color: #f2f2f2;
           }
         }
 
         &.next {
           &:after {
-            border-left-color: white;
+            border-left-color: #f2f2f2;
           }
         }
 

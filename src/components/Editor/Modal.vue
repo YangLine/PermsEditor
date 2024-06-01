@@ -68,7 +68,7 @@ export default {
     padding: 2em;
     width: 100%;
     max-width: 600px;
-    border-radius: 2px;
+    border-radius: 2rem;
     position: relative;
 
     .close {
@@ -115,12 +115,12 @@ export default {
 
       input, select {
         font: inherit;
-        font-family: 'Source Code Pro', monospace;
+        //font-family: 'Source Code Pro', monospace;
         border: 0;
-        border-radius: 2px;
+        border-radius: .5rem;
         width: 16em;
         padding: .2em .5em;
-        background-color: rgba(255,255,255,.75);
+        background-color: $grey;
       }
     }
 
@@ -130,7 +130,7 @@ export default {
       background: $brand-color;
       font-weight: bold;
       border: 0;
-      border-radius: 2px;
+      //border-radius: 2px;
       padding: .2em .5em;
       margin-top: .5em;
       cursor: pointer;

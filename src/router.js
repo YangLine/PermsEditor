@@ -50,34 +50,34 @@ let routes = [
   },
 ];
 
-if (!config.selfHosted) {
-  const publicRoutes = [
-    {
-      path: '/download',
-      name: 'download',
-      component: () => import(/* webpackChunkName: "download" */ './views/Download'),
-    },
-    {
-      path: '/sponsor',
-      name: 'sponsor',
-      component: () => import(/* webpackChunkName: "sponsor" */ './views/Sponsor'),
-    },
-    {
-      path: '/wiki',
-      name: 'wiki',
-      component: () => import(/* webpackChunkName: "wiki" */ './views/Wiki'),
-      redirect: '/wiki/Home',
-      children: [
-        {
-          path: ':page',
-          name: 'wiki-article',
-          component: () => import(/* webpackChunkName: "wiki" */ './components/Wiki/Article'),
-        },
-      ],
-    },
-  ];
-  routes = [...routes, ...publicRoutes];
-}
+// if (!config.selfHosted) {
+//   const publicRoutes = [
+//     {
+//       path: '/download',
+//       name: 'download',
+//       component: () => import(/* webpackChunkName: "download" */ './views/Download'),
+//     },
+//     {
+//       path: '/sponsor',
+//       name: 'sponsor',
+//       component: () => import(/* webpackChunkName: "sponsor" */ './views/Sponsor'),
+//     },
+//     {
+//       path: '/wiki',
+//       name: 'wiki',
+//       component: () => import(/* webpackChunkName: "wiki" */ './views/Wiki'),
+//       redirect: '/wiki/Home',
+//       children: [
+//         {
+//           path: ':page',
+//           name: 'wiki-article',
+//           component: () => import(/* webpackChunkName: "wiki" */ './components/Wiki/Article'),
+//         },
+//       ],
+//     },
+//   ];
+//   routes = [...routes, ...publicRoutes];
+// }
 
 export default new Router({
   mode: 'history',

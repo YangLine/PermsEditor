@@ -112,7 +112,7 @@ export default {
 
 <style lang="scss">
 .editor-meta {
-  background-color: rgba(255,255,255,.1);
+  background-color: #222222;
   padding: 0 1em 1em;
 
   > div {
@@ -133,7 +133,7 @@ export default {
           cursor: pointer;
 
           span {
-            color: white;
+            color: #f2f2f2;
             opacity: .1;
 
             &:hover {
@@ -152,7 +152,7 @@ export default {
         background: $brand-color;
         font: inherit;
         border: 0;
-        border-radius: 2px;
+        border-radius: .5rem;
         font-size: 1rem;
         font-weight: bold;
         padding: 0 .5rem;
@@ -168,11 +168,12 @@ export default {
         overflow-y: auto;
         z-index: 100;
         box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
+        border-radius: 1rem;
 
         li {
           padding: .25rem 1rem;
           margin: 0;
-          font-family: "Source Code Pro", monospace;
+          font-family: "Jetbrains Mono", monospace;
           font-size: .8rem;
           cursor: pointer;
 

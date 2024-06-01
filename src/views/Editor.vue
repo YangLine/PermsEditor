@@ -80,7 +80,8 @@
           id="editor-menu-toggle"
           @click="menu = !menu"
         >
-          <font-awesome icon="bars" />
+<!--          <font-awesome icon="bars" />-->
+          <span class="material-symbols-outlined">menu_open</span>
         </button>
 
         <div class="editor-main">
@@ -97,10 +98,14 @@
                   v-if="search.toggle"
                   type="text"
                   v-model="search.query"
-                  placeholder="Search"
+                  placeholder=""
                   ref="searchInput"
                 />
-                <button @click="toggleSearch">
+                <button @click="toggleSearch" v-if="search.toggle" style="border-top-left-radius: 0;border-bottom-left-radius: 0">
+                  <font-awesome v-if="search.query" icon="times" fixed-width />
+                  <font-awesome v-else icon="search" fixed-width />
+                </button>
+                <button @click="toggleSearch" v-if="!search.toggle">
                   <font-awesome v-if="search.query" icon="times" fixed-width />
                   <font-awesome v-else icon="search" fixed-width />
                 </button>
@@ -364,7 +369,7 @@ main.editor {
             }
 
             h1 {
-              font-size: 1.5rem;
+              font-size: 1.2rem;
             }
           }
 
@@ -381,6 +386,7 @@ main.editor {
               border:0;
               margin-left: .5rem;
               cursor: pointer;
+              border-radius: 1rem;
 
               &:hover {
                 opacity: .8;
@@ -394,6 +400,11 @@ main.editor {
               button {
                 background: white;
                 margin: 0;
+              }
+
+              input {
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
               }
             }
 

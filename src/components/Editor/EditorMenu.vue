@@ -235,12 +235,15 @@ export default {
     border-right: 1px solid rgba(255,255,255,.2);
     position: absolute;
     z-index: 55;
-    background: black;
+    background: #222222;
     top: 4rem;
     bottom: 0;
     left: -20rem;
     transition: left .2s;
     user-select: none;
+    //border-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 
     @include breakpoint($sm) {
       position: relative;
@@ -261,7 +264,7 @@ export default {
 
       input {
         font: inherit;
-        color: white;
+        color: #f2f2f2;
         background: rgba(255,255,255,.1);
         border: none;
         padding: .5rem 1rem;
@@ -283,7 +286,7 @@ export default {
         top: 50%;
         transform: translateY(-50%);
         background: transparent;
-        color: white;
+        color: #f2f2f2;
         opacity: .5;
         border: 0;
 
@@ -317,7 +320,7 @@ export default {
         border: none;
         opacity: .5;
         cursor: pointer;
-        color: white;
+        color: #f2f2f2;
         font-size: 1.5rem;
         padding: 0;
 
@@ -473,7 +476,7 @@ export default {
           border: 0;
           opacity: 0;
           cursor: pointer;
-          color: white;
+          color: #f2f2f2;
         }
       }
     }

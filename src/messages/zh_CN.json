@@ -1,0 +1,295 @@
+{
+  "description": "为 Minecraft 服务器设计的权限管理插件。",
+  "close": "关闭",
+  "copy": "复制",
+  "wiki": "百科",
+  "avatar": "{name} 的头像",
+  "sponsor": "由 <strong>BisectHosting</strong> 荣誉赞助<br/><span class=\"new\">NEW:</span> 为 LuckPerms 用户提供特别优惠!",
+  "links": {
+    "home": "主页",
+    "download": "下载",
+    "editor": "网页版编辑器",
+    "verbose": "权限调试查看器",
+    "tree": "权限树状图查看器",
+    "wiki": "百科",
+    "tools": {
+      "name": "工具与应用",
+      "editor": "编辑器",
+      "verbose": "权限调试",
+      "tree": "权限树状图"
+    }
+  },
+  "home": {
+    "name": "主页",
+    "supported": "支持 Bukkit/Spigot/Paper, BungeeCord, Sponge, Fabric, Nukkit 和 Velocity 服务器",
+    "why": {
+      "title": "为什么选择 LuckPerms ?",
+      "description": "LuckPerms 是为 Minecraft 设计的服务器权限插件。它允许服务器管理员通过创建组和分配权限来控制玩家可以使用的功能。",
+      "its": "其具有的优势:",
+      "fast": "<b>响应迅速</b> - 在开发之初便已经将性能和可扩展性放在首位。",
+      "reliable": "<b>深受信赖</b> - 被数以千计的服务器管理者使用，再大型的服务器也有我们的身影。",
+      "easy": "<b>简易上手</b> - 通过命令，配置文件，网页版编辑器等方式添加您的权限。",
+      "flexible": "<b>高效灵活</b> - 支持多种不同的存储方式与服务器平台。",
+      "extensive": "<b>可客制化</b> - 为您的服务器提供大量的自定义选项和设置，以便您最大程度客制化使用体验。",
+      "free": "<b>永远免费</b> - 由于许可证的选用，它可以做到永远免费地提供下载和使用。",
+      "more": "欲知更多，查看Wiki上的文章 {wiki}",
+      "why": "为什么选择 LuckPerms?"
+    },
+    "apps": {
+      "title": "网页应用",
+      "description1": "这个站点托管了许多额外的网页应用程序，这些应用程序将与插件一同协作，为您服务。",
+      "description2": "这些应用程序是为所有用户设计的，即使是那些没有能力在自己的网页服务器上安装/托管应用程序的用户也能轻松使用。"
+    },
+    "wiki": "了解如何安装、设置、配置和高效地利用 LuckPerms",
+    "github": "浏览源代码，报告问题并为项目做出贡献",
+    "discord": "与 {count} 名其他用户一道讨论插件，或提问，或解答，社区总是互助的。",
+    "patreon": "与 {count} 名用户一同在 Patreon 上用金钱支撑起 LuckPerms 的未来",
+    "partner": {
+      "title": "主机商合作通道",
+      "description": "了解如何在您的服务器上获得大量托管订单，并同时支持我们"
+    }
+  },
+  "download": {
+    "title": "下载 LuckPerms",
+    "build": "最新版本构建于 {time}",
+    "typeHelp": "不确定是哪种类型？",
+    "typeChoose": "选择您的服务器平台",
+    "bukkit": "诸如 Spigot, Paper 此类 (1.8.8 至 1.20.x)",
+    "bungee": "诸如 BungeeCord, Waterfall 此类 (仅最新版)",
+    "sponge": "Sponge (API 8)",
+    "fabric": "Fabric (1.20.x)",
+    "nukkit": "NukkitX (b93 或更新)",
+    "velocity": "Velocity (3.x)",
+    "bukkitLegacy": "诸如 Spigot, Paper 此类。 (仅1.7.10)",
+    "changelog": "最近的更新日志",
+    "install": {
+      "title": "如何安装",
+      "add": "将下载的插件 <code>.jar</code> 文件添加到你服务器的 <code>plugins</code> 或 <code>mods</code> 文件夹。",
+      "restart": "运行或重启您的服务器 - <strong>请不要使用reload!</strong>",
+      "config": "找到插件的配置文件 (通常储存在 <code>/plugins/LuckPerms/</code>) 并按您的需求调整任何配置项。",
+      "setup": "是时候开始设置您的权限了！查看 {wiki} 指南来获取更多信息。",
+      "wiki": "入门教程"
+    },
+    "trouble": {
+      "title": "安装时遇到问题？",
+      "console": "请检查控制台是否有任何错误消息——尤其是在启动期间的错误",
+      "read": "在 {wiki} 的文档页面查看您是否需要执行进一步的操作。",
+      "wiki": "安装教程",
+      "support": "如果遇到了一些特殊问题，在 {discord} 上联系我们，我们很乐意为您提供帮助。"
+    },
+    "extensions": {
+      "title": "拓展",
+      "description": "拓展能魔改 LuckPerms 的行为，您可以在 {wiki} 得到更多有关信息。",
+      "descriptionWiki": "文档页面",
+      "legacy": "Legacy API 拓展",
+      "legacyInfo": "允许尚未升级到 v5 版本 API 的插件使用一些常见的 API 方法。",
+      "more": "查看 {wiki} 获取更多信息!",
+      "wiki": "wiki 章节",
+      "defaultAssignments": "Default Assignments 拓展",
+      "defaultAssignmentsInfo": "如果推荐方式不能满足要求，此拓展可以作为 分配功能{wiki} 的替代方法。",
+      "groups": "默认权限组",
+      "version": "LuckPerms 5.0 及以上"
+    }
+  },
+  "editor": {
+    "description": "编辑器",
+    "start": "要启动新的编辑器会话，请使用以下命令之一:",
+    "loading": "正在加载数据...",
+    "permissions": "权限",
+    "key": "键",
+    "value": "值",
+    "expiry": "时长",
+    "contexts": "情境",
+    "search": "搜索",
+    "add": "添加",
+    "copy": "复制",
+    "move": "移动",
+    "replace": "替换",
+    "delete": "删除",
+    "cancel": "取消",
+    "update": "更新",
+    "save": "保存",
+    "apply": "应用",
+    "saveAndGenerate": "保存并生成响应码",
+    "saving": "正在保存...",
+    "saved": "数据已保存！",
+    "command": "在您的服务器中运行该命令以应用更改:",
+    "copied": "命令已复制到剪贴板",
+    "clipboardCopy": "复制到剪贴板",
+    "clearFilters": "清除筛选参数",
+    "noResults": "未找到任何结果",
+    "applyNote": "<strong>注意：</strong> 运行 <code>applyedits</code> 命令后，你应该生成另一个编辑器 URL 以继续编辑你的服务器的权限。",
+    "nav": {
+      "tracks": "组继承",
+      "groups": "组",
+      "users": "玩家"
+    },
+    "reusedsession": {
+      "title": "被复用的会话",
+      "desc": "此会话已过期！",
+      "desc2": "它可能含有过时的数据，无法展示实际存储的数据。 请重新创建会话再继续编辑权限。"
+    },
+    "trust": {
+      "title": "网页编辑器连接",
+      "prompt": "如果您信任此网页浏览器的更改，并允许它在今后能直接对您的服务器应用更改，请在游戏中执行以下命令：",
+      "note": "<strong>注意：</strong> 您只需操作一次，服务器便能记住此浏览器以备未来的编辑会话。"
+    },
+    "groups": {
+      "create": "创建权限组",
+      "name": "组名",
+      "choose": "选择一个操作以开始",
+      "toggle": "显示/隐藏 权限组",
+      "delete": "你确定要删除权限组 <code>{group}</code> 吗？",
+      "deleteConfirm": "共计 {count} 个权限都将被删除。此操作将无法撤消。",
+      "displayName": "显示名称",
+      "parent": "继承于",
+      "weight": "权重",
+      "prefix": "前缀",
+      "suffix": "后缀",
+      "add": "添加",
+      "edit": "编辑",
+      "none": "无"
+    },
+    "users": {
+      "delete": "你确定要删除用户 {user} 吗？",
+      "deleteConfirm": "共计 {count} 个权限都将被删除。此操作目前无法撤消。",
+      "edit": "编辑用户",
+      "toggleUsers": "显示/隐藏 用户"
+    },
+    "nodes": {
+      "add": "添加权限节点",
+      "update": "更新权限节点",
+      "permissionsCount": "权限节点 <span>({count})</span>",
+      "addPermissions": "添加权限",
+      "addContext": "添加情境",
+      "addContexts": "添加多个情境",
+      "deselect": "取消选择所有权限节点",
+      "select": "取消选中的所有节点",
+      "selectAll": "为批量操作选中全部权限节点",
+      "replace": "替换情境而不是添加？",
+      "edit": "点击编辑权限",
+      "toggle": "点击切换 true/false",
+      "expiry": "点击设定一个有效期",
+      "never": "永不过期",
+      "deleteExpiry": "删除有效期",
+      "contexts": "点击编辑此权限节点的情境",
+      "enter": "输入权限或粘贴多个",
+      "enterToSelect": "按回车键选择",
+      "contextsCount": "情境 <span>({count})</span>",
+      "selected": "<span>{count}</span> 个权限节点已选择 | <span>{count}</span> 个权限节点已选择",
+      "copy": "复制 {count} 个权限节点到... | 复制 {count} 个权限节点到...",
+      "move": "移动 {count} 个权限节点到... | 移动 {count} 个权限节点到...",
+      "delete": "删除 {count} 个权限节点？ | 删除 {count} 个权限节点？",
+      "deleteConfirm": "你确定要删除 {count} 个权限节点吗？ | 你确定要删除 {count} 个权限节点吗？",
+      "selection": {
+        "true": "将所有值更改为 TRUE",
+        "false": "将所有值更改为 FALSE",
+        "keep": "保持值不变"
+      },
+      "sort": {
+        "permission": "按权限排序",
+        "value": "按 true/false 排序",
+        "expiry": "按过期时间排序",
+        "contexts": "按情境排序"
+      }
+    },
+    "tracks": {
+      "create": "创建继承路线",
+      "groups": "权限组",
+      "tip": "拖动以重新排序",
+      "addGroups": "添加权限组",
+      "edit": "编辑继承路线",
+      "name": "继承组名称",
+      "add": "添加",
+      "save": "保存",
+      "delete": "删除",
+      "filter": "筛选权限组路线、权限组和用户",
+      "toggle": "显示/隐藏 权限组路线",
+      "toggleGroups": "显示/隐藏 路线上的组"
+    },
+    "meta": {
+      "add": "添加一个父权限组到 {id}",
+      "parents": "父权限组",
+      "weight": "权重: ",
+      "gotoParent": "转到 {parent} 组",
+      "removeParent": "删除 {parent} 做为父权限组"
+    },
+    "error": {
+      "title": "加载出错",
+      "info": "URL 复制错误或会话已过期。",
+      "new": "请使用 {command} 生成另一个编辑器会话。"
+    },
+    "unsupported": {
+      "title": "不支持的版本",
+      "info": "请 {download} 最新版本的 LuckPerms 以使用网页编辑器",
+      "download": "下载"
+    }
+  },
+  "tree": {
+    "title": "权限树查看器",
+    "generate": "要生成权限树，请在游戏中或从控制台执行以下操作：",
+    "uploaded": "上传者",
+    "user": "查看的用户",
+    "time": "时间",
+    "started": "权限树生成时间",
+    "expand": "全部展开",
+    "collapse": "全部折叠",
+    "home": {
+      "generate": "要生成权限树，请在游戏中或从控制台执行以下操作：",
+      "scope": "树的根",
+      "player": "玩家名称",
+      "url": "打开生成的 URL"
+    }
+  },
+  "verbose": {
+    "title": "详细日志查看器",
+    "uploaded": "上传者",
+    "start": "开始时间",
+    "started": "权限树生成时间",
+    "end": "结束时间",
+    "ended": "录制结束时间",
+    "duration": "持续时间",
+    "recording": "插件录制了多长时间",
+    "count": "统计",
+    "values": "有多少个值匹配/总共进行了多少次检查",
+    "filter": "筛选条件",
+    "filterLabel": "按用户名或权限筛选节点：",
+    "filterDesc": "用于筛选输出的字符串",
+    "truncated": "数据是否丢失",
+    "truncatedDesc": "数据受上传大小截断",
+    "filterPlaceholder": "在此处输入筛选条件",
+    "context": "情境",
+    "origin": "来源",
+    "processor": "处理器",
+    "cause": "触发于",
+    "thread": "线程",
+    "trace": "线程追踪",
+    "home": {
+      "generate": "要生成详细日志报告，请在游戏中或从控制台执行以下操作：",
+      "performActions": "执行一系列需要权限的操作",
+      "filter": "筛选条件",
+      "url": "打开生成的 URL"
+    }
+  },
+  "tools": {
+    "demo": "查看演示"
+  },
+  "quiz": {
+    "choose": "你运行的是单个服务器还是群组服？",
+    "single": "单个服务器",
+    "network": "群组服务器",
+    "type": "你正在运行什么类型的服务器？",
+    "note": "注意：所有后端服务器仍然需要 LuckPerms。",
+    "version": "你正在运行什么版本的 {serverType} ？",
+    "older": "{version} 或更旧",
+    "newer": "{version} 或更新",
+    "result": "你需要 {serverType} 的 LuckPerms",
+    "resultLegacy": "你需要 {serverType} 的 LuckPerms Legacy",
+    "travertine": "不支持你的 BungeeCord 版本，如果你想使用 LuckPerms，请考虑切换到 Travertine。",
+    "outdated": "不支持你的 {serverType} 版本，如果你想使用 LuckPerms，必须升级你的服务器。"
+  },
+  "notFound": {
+    "title": "找不到内容！",
+    "message": "页面 {path} 不存在"
+  }
+}
