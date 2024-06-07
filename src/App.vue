@@ -91,9 +91,9 @@
         <ul>
           <li>
             <font-awesome icon="code-branch" fixed-width />
-            <a href="https://github.com/LuckPerms/LuckPermsWeb" target="_blank">PermEditor</a>
+            <a href="https://github.com/YangLine/PermsEditor" target="_blank">PermEditor</a>
             @
-            <a :href="'https://github.com/LuckPerms/LuckPermsWeb/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
+            <a :href="'https://github.com/YangLine/PermsEditor/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
           </li>
           <li>
             <span>
@@ -309,7 +309,7 @@ body {
     box-shadow: 0 0 1rem rgba(0,0,0,0.2);
 
     svg {
-      color: #95b556;
+      color: rgb(255, 200, 0);
     }
 
     a {
